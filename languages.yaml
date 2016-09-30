@@ -93,3 +93,5 @@ en:
         # Character replacements
         '~([A-Z]+)([A-Z][a-z])~': '\1-\2'
         '~([a-z]{2,})([A-Z])~': '\1-\2'
+      TOC_TITLE: 'Table of contents'
+      MINITOC_TITLE: 'Overview'
