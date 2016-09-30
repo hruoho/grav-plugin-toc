@@ -455,7 +455,8 @@ class Toc
     // Perform some language dependent replacements
     $lang = $language ? [$language]: $this->language;
     $replacements = self::getGrav()['language']->translate('PLUGINS.TOC.PATTERNS', $lang, true);
-    $text = preg_replace(array_keys($replacements), $replacements, $text);
+    if (is_array($replacements))
+        $text = preg_replace(array_keys($replacements), $replacements, $text);
 
     // Trim
     $text = trim($text, '-');
